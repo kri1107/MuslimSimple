@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Muslim Simple</string>
+    <string name="login_text_header">Login with your existing account</string>
+    <string name="btn_login">Login</string>
+    <string name="tv_header_login_email">or by using email</string>
+    <string name="tv_switch_rememberme">remember me</string>
+    <string name="tvb_forgotpass">forgot password?</string>
+    <string name="tv_header_register">Create new account</string>
+    <string name="register_text_header">Register New Account</string>
 </resources>
