@@ -7,4 +7,12 @@
     <string name="tvb_forgotpass">forgot password?</string>
     <string name="tv_header_register">Create new account</string>
     <string name="register_text_header">Register New Account</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_schedule">Schedule</string>
+    <string name="title_quran">Al Qur\'an</string>
+    <string name="title_profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_home">Home Nav</string>
 </resources>
