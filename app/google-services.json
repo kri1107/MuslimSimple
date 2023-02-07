@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "943852296553",
+    "project_id": "muslim-simple-4c9f3",
+    "storage_bucket": "muslim-simple-4c9f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943852296553:android:18cf69e8785b4330ee85f8",
+        "android_client_info": {
+          "package_name": "com.androweed.muslimsimple"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "943852296553-u9e0ktg3m74e1hsqgi4bj5aurojpr55g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkE81cHTH9Y9Kj8WjoyFvtlKcFpcozfuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "943852296553-u9e0ktg3m74e1hsqgi4bj5aurojpr55g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
