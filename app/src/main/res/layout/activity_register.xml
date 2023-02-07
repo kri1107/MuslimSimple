@@ -6,217 +6,222 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="251dp"
-        android:layout_height="218dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/iv_register_illustration" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="28dp"
-        android:clipToOutline="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/container_outter"
-            android:layout_width="match_parent"
-            android:layout_height="520dp"
-            android:layout_marginTop="48dp"
-            android:translationZ="1dp"
-            app:cardBackgroundColor="@color/container_outer"
-            app:cardCornerRadius="32dp"
-            app:cardElevation="0dp"
-            app:cardMaxElevation="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="251dp"
+                android:layout_height="218dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/container"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/iv_register_illustration" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:id="@+id/container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="32dp"
+                android:clipToOutline="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/container_inner"
+                    android:id="@+id/container_outter"
                     android:layout_width="match_parent"
-                    android:layout_height="460dp"
-                    android:layout_weight="1"
-                    android:translationZ="10dp"
+                    android:layout_height="520dp"
+                    android:layout_marginTop="48dp"
+                    android:translationZ="1dp"
+                    app:cardBackgroundColor="@color/container_outer"
                     app:cardCornerRadius="32dp"
                     app:cardElevation="0dp"
                     app:cardMaxElevation="0dp"
-                    app:layout_constraintBottom_toBottomOf="parent">
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/container_inner"
+                            android:layout_width="match_parent"
+                            android:layout_height="460dp"
+                            android:layout_weight="1"
+                            android:translationZ="10dp"
+                            app:cardCornerRadius="32dp"
+                            app:cardElevation="0dp"
+                            app:cardMaxElevation="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/tv_header_register"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="@string/tv_header_register"
+                                    android:textColor="@color/text_faded2"
+                                    android:textSize="16sp"
+                                    app:layout_constraintBottom_toTopOf="@+id/textfield_email"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/textfield_email"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="24dp"
+                                    android:hint="Email"
+                                    app:endIconMode="clear_text"
+                                    app:layout_constraintBottom_toTopOf="@+id/textfield_fullname"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:layout_width="320dp"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="textEmailAddress" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/textfield_password"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="16dp"
+                                    android:hint="Password"
+                                    app:endIconMode="password_toggle"
+                                    app:layout_constraintBottom_toTopOf="@id/btn_register"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:layout_width="320dp"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="textPassword" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/textfield_fullname"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="16dp"
+                                    android:hint="Full name"
+                                    app:endIconMode="clear_text"
+                                    app:layout_constraintBottom_toTopOf="@+id/textfield_password"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:layout_width="320dp"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="textPassword" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/linearLayout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="32dp"
+                                    android:dividerPadding="20dp"
+                                    android:orientation="horizontal"
+                                    android:paddingStart="12dp"
+                                    android:paddingEnd="12dp"
+                                    android:translationZ="40dp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/icFacebookRegister"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:paddingStart="4dp"
+                                        android:paddingEnd="4dp"
+                                        app:srcCompat="@drawable/ic_facebook" />
+
+                                    <ImageView
+                                        android:id="@+id/icTwitterRegister"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:paddingStart="4dp"
+                                        android:paddingEnd="4dp"
+                                        app:srcCompat="@drawable/ic_twitter" />
+
+                                    <ImageView
+                                        android:id="@+id/icGoogleRegister"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:paddingStart="4dp"
+                                        android:paddingEnd="4dp"
+                                        app:srcCompat="@drawable/ic_google_plus" />
+
+                                </LinearLayout>
+
+                                <Button
+                                    android:id="@+id/btn_register"
+                                    android:layout_width="280dp"
+                                    android:layout_height="52dp"
+                                    android:layout_marginBottom="48dp"
+                                    android:fontFamily="@font/poppins_semibold"
+                                    android:text="REGISTER"
+                                    android:textSize="18sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tvb_register_login"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/btn_register" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
                         <TextView
-                            android:id="@+id/tv_header_register"
+                            android:id="@+id/tv_container_header"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:fontFamily="@font/poppins_medium"
-                            android:text="@string/tv_header_register"
-                            android:textColor="@color/text_faded2"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@+id/textfield_email"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/textfield_email"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="24dp"
-                            android:hint="Email"
-                            app:endIconMode="clear_text"
-                            app:layout_constraintBottom_toTopOf="@+id/textfield_fullname"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:layout_width="320dp"
-                                android:layout_height="wrap_content"
-                                android:inputType="textEmailAddress" />
-
-                        </com.google.android.material.textfield.TextInputLayout>
-
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/textfield_password"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="16dp"
-                            android:hint="Password"
-                            app:endIconMode="password_toggle"
-                            app:layout_constraintBottom_toTopOf="@+id/button"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:layout_width="320dp"
-                                android:layout_height="wrap_content"
-                                android:inputType="textPassword" />
-
-                        </com.google.android.material.textfield.TextInputLayout>
-
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/textfield_fullname"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="16dp"
-                            android:hint="Full name"
-                            app:endIconMode="clear_text"
-                            app:layout_constraintBottom_toTopOf="@+id/textfield_password"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:layout_width="320dp"
-                                android:layout_height="wrap_content"
-                                android:inputType="textPassword" />
-
-                        </com.google.android.material.textfield.TextInputLayout>
-
-
-                        <LinearLayout
-                            android:id="@+id/linearLayout"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="32dp"
-                            android:dividerPadding="20dp"
-                            android:orientation="horizontal"
-                            android:paddingStart="12dp"
-                            android:paddingEnd="12dp"
-                            android:translationZ="40dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
-
-                            <ImageView
-                                android:id="@+id/icFacebookRegister"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:paddingStart="4dp"
-                                android:paddingEnd="4dp"
-                                app:srcCompat="@drawable/ic_facebook" />
-
-                            <ImageView
-                                android:id="@+id/icTwitterRegister"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:paddingStart="4dp"
-                                android:paddingEnd="4dp"
-                                app:srcCompat="@drawable/ic_twitter" />
-
-                            <ImageView
-                                android:id="@+id/icGoogleRegister"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:paddingStart="4dp"
-                                android:paddingEnd="4dp"
-                                app:srcCompat="@drawable/ic_google_plus" />
-
-                        </LinearLayout>
-
-                        <Button
-                            android:id="@+id/button"
-                            android:layout_width="280dp"
-                            android:layout_height="52dp"
-                            android:layout_marginBottom="48dp"
                             android:fontFamily="@font/poppins_semibold"
-                            android:text="REGISTER"
+                            android:text="@string/register_text_header"
+                            android:textColor="@color/text_faded"
                             android:textSize="18sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:id="@+id/tvb_register_login"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintBottom_toTopOf="@+id/container_inner"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/button" />
-
+                            app:layout_constraintTop_toTopOf="parent" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:id="@+id/tv_container_header"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:text="@string/register_text_header"
-                    android:textColor="@color/text_faded"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toTopOf="@+id/container_inner"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.cardview.widget.CardView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
