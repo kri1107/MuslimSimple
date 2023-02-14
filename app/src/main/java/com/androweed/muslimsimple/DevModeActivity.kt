@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.androweed.muslimsimple.arahkiblat.ArahKiblatActivity
 import com.androweed.muslimsimple.databinding.ActivityDevModeBinding
 
 class DevModeActivity : AppCompatActivity() {
@@ -22,11 +23,16 @@ class DevModeActivity : AppCompatActivity() {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
+        binding.btnCompass.setOnClickListener {
+            val intent = Intent(this, ArahKiblatActivity::class.java)
+            startActivity(intent)
+        }
+
         var textView: TextView
 
         textView = binding.tvMainDevMode
 
-        textView.setText("This is developer mode main activity view\n" +
-                "All activity can be accessed here!!!\n" + "Copyright 2023 Androweed Team")
+        textView.text = "This is developer mode main activity view\n" +
+                "All activity can be accessed here!!!\n" + "Copyright 2023 Androweed Team"
     }
 }

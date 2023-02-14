@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="white">#ffffff</color>
     <color name="black">#FF000000</color>
     <color name="primary">#57CC99</color>
     <color name="secondary">#80ED99</color>
@@ -9,4 +10,5 @@
     <color name="text_faded">#626262</color>
     <color name="text_faded2">#ADADAD</color>
     <color name="container_outer">#F5F5F5</color>
+
 </resources>
