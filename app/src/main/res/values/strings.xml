@@ -55,4 +55,11 @@
     <string name="waktu_sholat">Sholat Dzuhur</string>
     <string name="welcome_screen">Welcome Screen</string>
     <string name="btn_home">Home Navigation</string>
+    <string name="lokasi_anda">Lokasi Anda</string>
+    <string name="masjid">Masjid</string>
+    <string name="kiblat">Kiblat</string>
+    <string name="dzikir">Dzikir</string>
+    <string name="inspirasi">Inspirasi</string>
+    <string name="text_banner_dzikir">Sudahkah antum baca</string>
+    <string name="text_banner_dzikir1">Dzikir Pagi?</string>
 </resources>
