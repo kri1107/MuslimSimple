@@ -96,6 +96,7 @@
                                     app:layout_constraintStart_toStartOf="parent">
 
                                     <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edt_email"
                                         android:layout_width="320dp"
                                         android:layout_height="wrap_content"
                                         android:inputType="textEmailAddress" />
@@ -114,6 +115,7 @@
                                     app:layout_constraintStart_toStartOf="parent">
 
                                     <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edt_password"
                                         android:layout_width="320dp"
                                         android:layout_height="wrap_content"
                                         android:inputType="textPassword" />
@@ -132,6 +134,7 @@
                                     app:layout_constraintStart_toStartOf="parent">
 
                                     <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edt_fullname"
                                         android:layout_width="320dp"
                                         android:layout_height="wrap_content"
                                         android:inputType="textPassword" />

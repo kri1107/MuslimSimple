@@ -10,7 +10,7 @@ import com.google.firebase.auth.FirebaseAuth
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
-    private lateinit var firebaseAuth: FirebaseAuth
+    lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +19,7 @@ class RegisterActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        firebaseAuth = FirebaseAuth.getInstance()
+        auth = FirebaseAuth.getInstance()
 
         val textView = binding.tvbRegisterLogin
         textView.text= Html.fromHtml("<font color=#ADADAD>Already have account? </font>" + "<font color=#2ABA7E>login here</font>" )
@@ -30,6 +30,8 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         binding.btnRegister.setOnClickListener {
+            val email = binding.edtEmail.text.toString()
+            val password = binding.edtPassword.text.toString()
         }
 
     }

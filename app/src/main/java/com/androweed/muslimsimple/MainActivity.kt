@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
 
-        fetchLocation()
+/*        fetchLocation()*/
     }
 
     private fun checkLocationPermission(){
