@@ -66,5 +66,13 @@
     <string name="tv_channel_video_kajian">Yufid.TV - Pengajian &amp; Ceramah Islam</string>
     <string name="yufid.tv">Yufid.TV - Pengajian &amp; Ceramah Islam</string>
     <string name="firanda_andirja">Firanda Andirja</string>
+    <string name="lokasi_user">Kecamatan Menteng</string>
+    <string name="desc_tv_lokasi_user">Menampilkan lokasi user sekarang.</string>
+    <string name="jam_sholat">12.05</string>
+    <string name="time_am">AM</string>
+    <string name="time_pm">PM</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 </resources>
