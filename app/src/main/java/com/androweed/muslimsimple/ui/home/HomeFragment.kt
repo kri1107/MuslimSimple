@@ -17,7 +17,6 @@ import com.androweed.muslimsimple.videokajian.home_recyclerview.ModelVideoKajian
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
-    lateinit var rvVKajian : RecyclerView
 
 
     // This property is only valid between onCreateView and
@@ -32,44 +31,52 @@ class HomeFragment : Fragment() {
         val homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+//        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
 
         /*val textView: TextView = binding.
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }*/
-        return root
 
         /* Recycler View*/
-        val lm = LinearLayoutManager(activity)
-        lm.orientation = LinearLayoutManager.HORIZONTAL
+        /*val lm = LinearLayoutManager(activity)
+        lm.orientation = LinearLayoutManager.VERTICAL
 
-        rvVKajian = root.findViewById(R.id.cv_home_videkajian)
+        rvVKajian = view.findViewById(R.id.rv_videokajian)
 
         val adapterVideoKajian = AdapterVideoKajian(ArrayVideoKajian,activity)
         rvVKajian.setHasFixedSize(true)
         rvVKajian.layoutManager = lm
-        rvVKajian.adapter = adapterVideoKajian
+        rvVKajian.adapter = adapterVideoKajian*/
 
+        val recyclerView = view.findViewById<RecyclerView>(R.id.rv_videokajian)
+        val adapter = AdapterVideoKajian(ArrayVideoKajian,activity)
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(activity)
 
+        return view
     }
 
     val ArrayVideoKajian : ArrayList<ModelVideoKajian>get() {
+
+        val firandaAndirja = "Firanda Andirja"
+        val yufidTV = "Yufid.TV - Pengajian & Ceramah Islam"
 
         val arrayvideokajian = ArrayList<ModelVideoKajian>()
 
         val videokajian1 = ModelVideoKajian()
         videokajian1.titleVideoKajian = "Al-Quran Membersihkan Hati"
-        videokajian1.channelVideoKajian = R.string.yufid_tv.toString()
+        videokajian1.channelVideoKajian = yufidTV
         videokajian1.thumbnailVideoKajian = R.drawable.iv_alquran_membersihkan_hati
 
         val videokajian2 = ModelVideoKajian()
         videokajian2.titleVideoKajian = "Baca, Pahami, Amalkan!"
-        videokajian2.channelVideoKajian = R.string.firanda_andirja.toString()
+        videokajian2.channelVideoKajian = firandaAndirja
         videokajian2.thumbnailVideoKajian = R.drawable.iv_baca_pahami_lalu_amalkan
 
         arrayvideokajian.add(videokajian1)
+        arrayvideokajian.add(videokajian2)
 
         return arrayvideokajian
     }
