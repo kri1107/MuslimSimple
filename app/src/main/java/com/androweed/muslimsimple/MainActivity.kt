@@ -33,10 +33,10 @@ class MainActivity : AppCompatActivity() {
             ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), 101)
             return
         }
-        task.addOnSuccessListener {
+        /*task.addOnSuccessListener {
             if(it != null){
                 Toast
             }
-        }
+        }*/
     }
 }
