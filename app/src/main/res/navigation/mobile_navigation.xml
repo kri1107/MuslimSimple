@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/navigation_quran"
         android:name="com.androweed.muslimsimple.ui.quran.QuranFragment"
-        android:label="@string/title_quran"
+        class="@string/title_quran"
         tools:layout="@layout/fragment_quran" />
     <fragment
         android:id="@+id/navigation_profile"
